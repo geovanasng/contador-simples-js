@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html> 
+    <head> </head>
+    <body>
+        <script>
+            var contador =0;
+            function aumentaContador(){
+                contador++;
+                let nome = prompt("Digite seu nome:");
+               /* alert("Olá " + nome);
+                alert(`Olá ${nome} como vai você?`); //outra opção para ("texto" + var + "texto")
+               alert (prompt("Digite seu nome")) //pega o conteúdo da mensagem e mostra na tela*/
+                let label = document.querySelector("label") //se passar só nome(label), entende como tag; se passar (#label), ele pega ID, se coloca (.label) ele procura classe
+                label.innerText = `Contador: ${contador}`
+            }
+        </script>
+        <button onclick="aumentaContador()"> 
+            Clique aqui
+        </button>
+        <label>
+            Contador: 0
+        </label>
+    </body>    
+</html>
